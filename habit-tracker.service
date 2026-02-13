@@ -1,0 +1,22 @@
+[Unit]
+Description=Habit Tracker ePaper Display Update
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=pi
+WorkingDirectory=/home/pi/habit-tracker-epaper
+ExecStart=/home/pi/habit-tracker-epaper/.venv/bin/python -m src.main
+Environment=PYTHONUNBUFFERED=1
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+
+# Resource limits
+MemoryMax=256M
+CPUQuota=80%
+
+[Install]
+WantedBy=multi-user.target

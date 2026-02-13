@@ -1,0 +1,24 @@
+notion:
+  api_key: "secret_xxx"           # Your Notion integration API key
+  database_id: "xxx-xxx-xxx"      # Your tracking database ID
+  habits_database_id: "xxx-xxx"   # Your habits metadata database ID (optional)
+
+# Optional: define habits here instead of in Notion.
+# If habits_database_id is set above, these are ignored.
+# habits:
+#   - name: "DRINK 4L WATER"
+#     notion_property: "Water"
+#     icon: "water"
+#   - name: "PLAY CHESS"
+#     notion_property: "Chess"
+#     icon: "chess"
+
+display:
+  rotation: 0  # 0, 90, 180, 270
+
+streak:
+  enabled: true
+
+calendar:
+  enabled: true
+  weeks: 12  # Number of weeks to display
